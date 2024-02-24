@@ -1,5 +1,6 @@
 import React from 'react'
 import './Home.css';
+import Cards from '../Cards/Cards';
 
 export default function Home() {
     return (
@@ -20,15 +21,7 @@ export default function Home() {
                             <button className="content-levels__btn">Advanced</button>
                         </div>
 
-                        <div className="content-cards">
-                            <ul className="content-card__item">
-                                <li>1</li>
-                                <li>2</li>
-                                <li>3</li>
-                                <li>3</li>
-                                <li>3</li>
-                            </ul>
-                        </div>
+                        <Cards />
 
                     </div>
                 </div>
