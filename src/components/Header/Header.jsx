@@ -14,7 +14,7 @@ export default function Header() {
                     <div className="header__text">
                         <p>Get ready to hop into an exhilarating journey of learning English! Don’t worry, we’ve got you covered like a linguist's blanket.</p>
                     </div>
-                    <button className="header-btn"><a href="#!" className="btn">Sing up</a></button>
+                    <button className="header-btn"><a href="#!">Sing up</a></button>
 
                 </div>
             </header>

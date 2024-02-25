@@ -7,7 +7,7 @@ import { rules } from '../CardsList/CardsList';
 
 export default function Home() {
     return (
-        <main>
+        <main className="main">
             <div className="container">
 
                 <div className="content-wrapper">

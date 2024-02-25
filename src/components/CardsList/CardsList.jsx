@@ -1,7 +1,6 @@
-import presentSimple from '../../img/presen-simple.png';
-import pastSimple from '../../img/past-simple.png';
-import futureSimple from '../../img/future-simple.png';
-
+import presentSimple from './img/presen-simple.png';
+import pastSimple from './img/past-simple.png';
+import futureSimple from './img/future-simple.png';
 
 const rules = [
     {

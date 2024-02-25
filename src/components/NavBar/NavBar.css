@@ -1,40 +1,28 @@
-:root {
-    /* Colors */
-    --blackpure: #000;
+/* :root { */
+/* Colors */
+/* --blackpure: #000;
     --black: #171718;
-    --black-border: #26292d;
+    --blueB: #5fa8d3;
     --white: #fff;
-    --purple: #5c62ec;
+    --grey: #e7e7e7;
+    --purple: #1b4965;
+    --blue: #62b6cb; */
 
-    /* Nav */
-    --nav-bg: var(--black);
-    --nav-border: var(--black-border);
-    --nav-text: var(--white);
+/* Nav */
+/* --nav-bg: var(--blue);
+    --nav-border: var(--blueB);
+    --nav-text: var(--white); */
 
-    /* Header */
-    --header-bg: var(--black);
-    --header-text: var(--white);
-    --header-border: var(--black-border);
-
-    /* Content */
-    --content-bg: var(--grey);
-    --content-text: var(--black);
-
-    /* Footer */
-    --footer-bg: var(--black);
-    --footer-text: var(--white);
-
-    /* Light mode */
-    --page-bg: var(--white);
-    --text-color: var(--black);
+/* Accent */
+/* --page-bg: var(--blue);
+    --text-color: var(--blueB);
     --accent: var(--purple);
     --title-1: var(--accent);
 
     --project-card-bg: var(--white);
     --project-card-text: var(--black);
-    --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
-}
-/* Dark mode btn */
+    --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25); */
+/* } */
 
 .dark-mode-btn {
     order: 9;
@@ -70,10 +58,9 @@
     left: 26px;
 }
 
-/* .dark-mode-btn__icon {
-    position: relative;
-    z-index: 9;
-} */
+.dark-mode-btn a {
+    color: var(--nav-text);
+}
 
 .nav {
     padding: 20px 0;
