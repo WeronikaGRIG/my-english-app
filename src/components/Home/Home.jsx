@@ -1,6 +1,9 @@
 import React from 'react'
 import './Home.css';
 import Cards from '../Cards/Cards';
+import { rules } from '../CardsList/CardsList';
+
+
 
 export default function Home() {
     return (
@@ -21,7 +24,23 @@ export default function Home() {
                             <button className="content-levels__btn">Advanced</button>
                         </div>
 
-                        <Cards />
+                        <div className="cards">
+                            {rules.map((rule, id) => {
+                                return (
+                                    <Cards key={id}
+                                        title={rule.title}
+                                        descr={rule.descr}
+                                        img={rule.img}
+                                        index={id}
+                                    />
+                                )
+                            }
+
+                            )}
+                        </div>
+
+
+
 
                     </div>
                 </div>
