@@ -1,6 +1,6 @@
 import React from 'react'
 import './Home.css';
-import Cards from '../Cards/Cards';
+import Card from '../Card/Card';
 import { rules } from '../CardsList/CardsList';
 
 
@@ -27,7 +27,7 @@ export default function Home() {
                         <div className="cards">
                             {rules.map((rule, id) => {
                                 return (
-                                    <Cards key={id}
+                                    <Card key={id}
                                         title={rule.title}
                                         descr={rule.descr}
                                         img={rule.img}
@@ -38,10 +38,6 @@ export default function Home() {
 
                             )}
                         </div>
-
-
-
-
                     </div>
                 </div>
             </div>

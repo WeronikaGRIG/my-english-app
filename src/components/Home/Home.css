@@ -27,11 +27,11 @@
     --footer-bg: var(--blue);
     --footer-text: var(--white);
 
-    /* Light mode */
-    /* --page-bg: var(--blue);
+    /* Accent */
+    --page-bg: var(--blue);
     --text-color: var(--blueB);
     --accent: var(--purple);
-    --title-1: var(--accent); */
+    --title-1: var(--accent);
 
     --project-card-bg: var(--white);
     --project-card-text: var(--black);

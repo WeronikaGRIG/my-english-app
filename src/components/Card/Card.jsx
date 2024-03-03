@@ -1,6 +1,6 @@
 
 
-export default function Cards(props) {
+export default function Card(props) {
     return (
 
         <div className="card__item">

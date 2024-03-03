@@ -1,65 +1,27 @@
-/* :root { */
-/* Colors */
-/* --blackpure: #000;
+:root {
+    /* Colors */
+    --blackpure: #000;
     --black: #171718;
     --blueB: #5fa8d3;
     --white: #fff;
     --grey: #e7e7e7;
     --purple: #1b4965;
-    --blue: #62b6cb; */
+    --blue: #62b6cb;
 
-/* Nav */
-/* --nav-bg: var(--blue);
+    /* Nav */
+    --nav-bg: var(--blue);
     --nav-border: var(--blueB);
-    --nav-text: var(--white); */
+    --nav-text: var(--white);
 
-/* Accent */
-/* --page-bg: var(--blue);
+    /* Accent */
+    --page-bg: var(--blue);
     --text-color: var(--blueB);
     --accent: var(--purple);
     --title-1: var(--accent);
 
     --project-card-bg: var(--white);
     --project-card-text: var(--black);
-    --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25); */
-/* } */
-
-.dark-mode-btn {
-    order: 9;
-
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 100px;
-    height: 32px;
-    padding: 10px;
-
-    border-radius: 50px;
-    background-color: var(--purple);
-}
-
-.dark-mode-btn::before {
-    content: "";
-
-    position: absolute;
-    top: 1px;
-    left: 1px;
-
-    display: block;
-    width: 24px;
-    height: 24px;
-
-    transition: left 0.2s ease-in;
-}
-
-.dark-mode-btn--active::before {
-    left: 26px;
-}
-
-.dark-mode-btn a {
-    color: var(--nav-text);
+    --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
 }
 
 .nav {
@@ -68,6 +30,12 @@
     border-bottom: 1px solid var(--nav-border);
     color: var(--nav-text);
     letter-spacing: normal;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+    min-width: 1200px;
 }
 
 .nav-row {
@@ -92,6 +60,41 @@
 
 .logo em {
     color: var(--accent);
+}
+
+.dark-mode-btn {
+    order: 9;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100px;
+    height: 32px;
+    padding: 10px;
+
+    border-radius: 7px;
+    background-color: var(--purple);
+}
+
+.dark-mode-btn::before {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+
+    display: block;
+    width: 24px;
+    height: 24px;
+
+    transition: left 0.2s ease-in;
+}
+
+.dark-mode-btn--active::before {
+    left: 26px;
+}
+
+.dark-mode-btn a {
+    color: var(--nav-text);
 }
 
 .nav-list {
