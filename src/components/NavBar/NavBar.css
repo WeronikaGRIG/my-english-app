@@ -1,29 +1,3 @@
-:root {
-    /* Colors */
-    --blackpure: #000;
-    --black: #171718;
-    --blueB: #5fa8d3;
-    --white: #fff;
-    --grey: #e7e7e7;
-    --purple: #1b4965;
-    --blue: #62b6cb;
-
-    /* Nav */
-    --nav-bg: var(--blue);
-    --nav-border: var(--blueB);
-    --nav-text: var(--white);
-
-    /* Accent */
-    --page-bg: var(--blue);
-    --text-color: var(--blueB);
-    --accent: var(--purple);
-    --title-1: var(--accent);
-
-    --project-card-bg: var(--white);
-    --project-card-text: var(--black);
-    --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
-}
-
 .nav {
     padding: 20px 0;
     background-color: var(--nav-bg);

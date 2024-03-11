@@ -18,7 +18,7 @@ export default function NavBar() {
 
                     <ul className="nav-list">
                         <li className="nav-list__item"><a href="./index.html" className="nav-list__link nav-list__link--active">Home</a></li>
-                        <li className="nav-list__item"><a href="./projects.html" className="nav-list__link">Vocab</a></li>
+                        <li className="nav-list__item"><a href="./vocab.html" className="nav-list__link">Vocab</a></li>
                         <li className="nav-list__item"><a href="./contacts.html" className="nav-list__link">Contacts</a></li>
                     </ul>
                 </div>

@@ -1,8 +1,6 @@
 import React from 'react'
 import './Home.css';
 import Card from '../Card/Card';
-import { rules } from '../CardsList/CardsList';
-
 
 
 export default function Home() {
@@ -18,26 +16,21 @@ export default function Home() {
                             <p>Our digital flashcards will intuitively enhance your vocabulary. Remember, Rome wasn’t built in a day, and neither is your vocab!</p>
                         </div>
 
+                        {/* вынести кнопки в отдельный компонент*/}
                         <div className="content-levels">
                             <button className="content-levels__btn">Beginner</button>
                             <button className="content-levels__btn">Intermediate</button>
                             <button className="content-levels__btn">Advanced</button>
                         </div>
 
-                        <div className="cards">
-                            {rules.map((rule, id) => {
-                                return (
-                                    <Card key={id}
-                                        title={rule.title}
-                                        descr={rule.descr}
-                                        img={rule.img}
-                                        index={id}
-                                    />
-                                )
-                            }
+                        {/* вынести карточки в отдельный компонент pages/Vocab, не забыть про импорты*/}
+                        <Card />
 
-                            )}
-                        </div>
+
+
+
+
+
                     </div>
                 </div>
             </div>

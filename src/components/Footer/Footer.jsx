@@ -8,8 +8,6 @@ import Twitter from '../SocialIcons/Twitter/Twitter';
 import LinkedIn from '../SocialIcons/LinkedIn/Linkedin';
 import GitHub from '../SocialIcons/GitHub/GitHub';
 
-
-
 export default function Footer() {
     return (
         <footer className="footer">

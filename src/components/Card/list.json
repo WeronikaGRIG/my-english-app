@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Tutorial",
+        "descr": "",
+        "img": "./img/present-simple"
+    },
+    {
+        "title": "Grammar",
+        "descr": "",
+        "img": "./img/past-simple"
+    },
+    {
+        "title": "Texts",
+        "descr": "",
+        "img": "./img/future-simple"
+    },
+    {
+        "title": "Words",
+        "descr": "",
+        "img": "./img/future-simple"
+    },
+    {
+        "title": "Phrasebook. Basik phrases",
+        "descr": "",
+        "img": "./img/future-simple"
+    },
+    {
+        "title": "Quizzes/Exercises",
+        "descr": "",
+        "img": "./img/future-simple"
+    }
+]
