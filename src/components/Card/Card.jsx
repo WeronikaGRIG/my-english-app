@@ -1,20 +1,27 @@
-import React from 'react'
 
+import './Card.css';
 import CardList from '../CardList/CardList.jsx';
+import { list } from './list.js';
 
 
 export default function Card() {
     return (
-        <section className='section'>
+        <div className='cards'>
             <div className="container">
-                {/* <h2 className="title-1">Learn <span>Words</span></h2> */}
+                <div className="cards__wrapper">
+                    <ul className="card">
+                        {list.map((card, i) => {
+                            return (
+                                <CardList key={i} {...card} />
+                            )
+                        })}
+                    </ul>
+                </div>
 
-                <ul className="cards">
-                    <CardList />
 
-                </ul>
+
             </div>
 
-        </section>
+        </div>
     )
 }

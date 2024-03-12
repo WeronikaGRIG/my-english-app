@@ -1,4 +1,4 @@
-import React from 'react'
+
 import './Home.css';
 import Card from '../Card/Card';
 
@@ -13,7 +13,7 @@ export default function Home() {
                     <div className="content-list">
                         <div className="content-list__item">
                             <h3 className="title-2">Let’s dive into the realm of words!</h3>
-                            <p>Our digital flashcards will intuitively enhance your vocabulary. Remember, Rome wasn’t built in a day, and neither is your vocab!</p>
+                            {/* <p></p> */}
                         </div>
 
                         {/* вынести кнопки в отдельный компонент*/}

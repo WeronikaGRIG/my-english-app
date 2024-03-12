@@ -1,5 +1,5 @@
 
-import React from 'react'
+
 import './Footer.css';
 
 import Vk from '../SocialIcons/VkIcon/VkIcon';
@@ -11,7 +11,7 @@ import GitHub from '../SocialIcons/GitHub/GitHub';
 export default function Footer() {
     return (
         <footer className="footer">
-            <div classNameName="container">
+            <div className="container">
                 <div className="footer__wrapper">
                     <ul className="social">
                         <li className="social__item"><a href="#!"><Vk /></a></li>

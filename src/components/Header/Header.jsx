@@ -1,4 +1,4 @@
-import React from 'react'
+
 import './Header.css';
 import NavBar from '../NavBar/NavBar';
 
@@ -12,7 +12,7 @@ export default function Header() {
                         <strong>Learn English <em>with Me</em></strong>
                     </h1>
                     <div className="header__text">
-                        <p>Get ready to hop into an exhilarating journey of learning English! Don’t worry, we’ve got you covered like a linguist's blanket.</p>
+                        <p>Приготовьтесь к увлекательному путешествию по изучению английского языка!</p>
                     </div>
                     <button className="header-btn"><a href="#!">Sing up</a></button>
 

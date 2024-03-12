@@ -1,13 +1,11 @@
-import React from 'react'
 
-export default function CardList() {
+
+export default function CardList({ title, description }) {
     return (
-        <li className="card__list">
-            <img src="" alt="Tutorial" />
-            <h2>Tutorial</h2>
-            <p>описание карточки</p>
-
-
+        <li className="card-list">
+            {/* <img src="" alt="#" /> */}
+            <h2 className="card-list__title">{title}</h2>
+            <p className="card-list__descr">{description}</p>
         </li>
     )
 }
