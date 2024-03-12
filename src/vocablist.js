@@ -1,4 +1,4 @@
-[
+const vocabs = [
     {
         "word": "afraid",
         "transcript": "əˈfreɪd",
@@ -105,3 +105,5 @@
         "translation": "опасный"
     }
 ]
+
+export { vocabs };

@@ -12,9 +12,9 @@ export default function Header() {
                         <strong>Learn English <em>with Me</em></strong>
                     </h1>
                     <div className="header__text">
-                        <p>Приготовьтесь к увлекательному путешествию по изучению английского языка!</p>
+                        <p>Приготовтесь к увлекательному путешествию по изучению английского языка!</p>
                     </div>
-                    <button className="header-btn"><a href="#!">Sing up</a></button>
+                    <button className="header-btn"><a href="#!">Войти</a></button>
 
                 </div>
             </header>

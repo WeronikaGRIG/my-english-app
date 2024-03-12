@@ -9,12 +9,6 @@
     background-color: var(--content-bg);
 }
 
-.container {
-    margin: 0 auto;
-    padding: 0 15px;
-    min-width: 1200px;
-}
-
 .content-wrapper {
     display: flex;
     justify-content: center;
@@ -90,6 +84,10 @@
 
 .content-levels__btn {
     color: var(--title-1);
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+
     background-color: var(--white);
     padding: 10px 35px;
     margin: 3px;

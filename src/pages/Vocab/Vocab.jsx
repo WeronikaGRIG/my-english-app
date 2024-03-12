@@ -1,12 +1,10 @@
-import React from 'react'
+import './Vocab.css'
 
 export default function Vocab() {
     return (
-        <div>
+        <main className="main">
 
 
-
-
-        </div>
+        </main>
     )
 }
