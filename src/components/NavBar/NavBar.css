@@ -1,16 +1,16 @@
 .nav {
     padding: 20px 0;
-    background-color: var(--nav-bg);
-    border-bottom: 1px solid var(--nav-border);
-    color: var(--nav-text);
+    background-color: var(--blueB);
+    border-bottom: 1px solid var(--white);
+    color: var(--white);
     letter-spacing: normal;
 }
 
-.container {
+/* .container {
     margin: 0 auto;
     padding: 0 15px;
     min-width: 1200px;
-}
+} */
 
 .nav-row {
     display: flex;
@@ -23,7 +23,7 @@
 
 .logo {
     margin-right: auto;
-    color: var(--nav-text);
+    color: var(--white);
     font-size: 24px;
     font-family: "Poppins", sans-serif;
 }
@@ -33,7 +33,7 @@
 }
 
 .logo em {
-    color: var(--accent);
+    color: var(--purple);
 }
 /* вынести кнопку в отдельный компонент */
 
@@ -70,7 +70,7 @@
 }
 
 .dark-mode-btn a {
-    color: var(--nav-text);
+    color: var(--white);
 }
 
 .nav-list {
@@ -86,7 +86,7 @@
 }
 
 .nav-list__link {
-    color: var(--nav-text);
+    color: var(--white);
     transition: opacity 0.2s ease-in;
 }
 
@@ -108,5 +108,5 @@
     display: block;
     height: 2px;
     width: 100%;
-    background-color: var(--accent);
+    background-color: var(--purple);
 }

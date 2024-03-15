@@ -9,17 +9,13 @@
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
 
-    padding: 64px 0;
     gap: 32px;
 }
 
 .card-list {
-    position: relative;
-    max-width: 244px;
-    max-height: 450px;
-    flex: 1 0 0;
-    align-self: center;
-    top: 0;
+    width: 250px;
+    height: 450px;
+
     border: 1px solid var(--grey);
     border-radius: 25px;
 }
@@ -32,9 +28,9 @@
 
 .card-list__title {
     font-size: 30px;
-    color: var(--accent);
+    color: var(--title-1);
 }
 
 .card-list__descr {
-    padding: 15px;
+    padding: 10px;
 }

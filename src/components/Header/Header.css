@@ -2,20 +2,16 @@
 .header {
     padding: 40px 0;
     min-height: 250px;
-    border: 1px solid var(--header-border);
 
     display: flex;
-    justify-content: center;
-    align-items: center;
 
-    background-color: var(--header-bg);
-    color: var(--header-text);
-    text-align: center;
+    background-color: var(--blueB);
+    /* border: 1px solid var(--header-border); */
+    color: var(--white);
 }
 
 .header__wrapper {
     padding: 0 15px;
-    max-width: 660px;
 }
 
 .header__title {
@@ -32,7 +28,7 @@
 
 .header__title em {
     font-style: normal;
-    color: var(--accent);
+    color: var(--purple);
 }
 
 .header__text {
@@ -55,7 +51,7 @@
 }
 
 .header-btn a {
-    color: var(--nav-text);
+    color: var(--white);
     font-size: 16px;
     font-weight: 500;
     font-family: "Poppins", sans-serif;

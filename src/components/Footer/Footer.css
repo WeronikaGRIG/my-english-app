@@ -1,8 +1,8 @@
 .footer {
     margin-top: auto;
     padding: 60px 0 50px;
-    background-color: var(--footer-bg);
-    color: var(--footer-text);
+    background-color: var(--blueB);
+    color: var(--white);
 }
 
 .footer__wrapper {
