@@ -1,0 +1,24 @@
+table {
+    display: block;
+    width: 75%;
+    border-spacing: 2px;
+    border-color: black;
+}
+
+tbody {
+    position: relative;
+    flex-direction: column;
+    border-radius: 24px;
+    border: 2px solid black;
+}
+
+tr {
+    position: relative;
+}
+
+td {
+    flex: 1 0 80px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+}

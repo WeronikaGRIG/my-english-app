@@ -1,6 +1,8 @@
 
 import './Home.css';
 import Card from '../Card/Card';
+import Table from '../Table/Table';
+
 
 export default function Home() {
     return (
@@ -18,8 +20,10 @@ export default function Home() {
                             <button className="content-levels__btn">Средний</button>
                             <button className="content-levels__btn">Продвинутый</button>
                         </div>
-                        {/* вынести карточки в отдельный компонент pages/Vocab, не забыть про импорты*/}
+                        {/* вынести карточки в отдельный компонент, не забыть про импорты*/}
                         <Card />
+                        <Table />
+
                     </div>
                 </div>
             </div>
