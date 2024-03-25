@@ -1,19 +1,19 @@
 
 import TableList from '../TableList/TableList';
 import { list } from '../../list';
-import './Table.css';
-
+import styles from './Table.module.css';
 
 export default function Table() {
-    return <div className='table'>
-        <div className="container">
-            <table className="table__wrapper">
-                <tbody>
-                    <td><strong> # </strong></td>
-                    <td><strong>Слово</strong></td>
-                    <td><strong>Транскрипция</strong></td>
-                    <td><strong>Перевод</strong></td>
-
+    return <div className={styles.tables}>
+        <div className={styles.container}>
+            <table className={styles.table}>
+                <tbody className={styles.tbody}>
+                    <tr className={styles.tr}>
+                        <td className={styles.td}><strong> # </strong></td>
+                        <td className={styles.td}><strong>Слово</strong></td>
+                        <td className={styles.td}><strong>Транскрипция</strong></td>
+                        <td className={styles.td}><strong>Перевод</strong></td>
+                    </tr>
                     {list.map((table, i) => {
                         return (
                             <TableList key={i} {...table} />
@@ -23,5 +23,5 @@ export default function Table() {
             </table>
         </div>
 
-    </div>;
+    </div >;
 }
