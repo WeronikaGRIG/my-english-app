@@ -1,32 +1,32 @@
 .tables {
-    background-color: aqua;
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
 }
 
-.container {
-    border: 1px solid black;
-}
+/* .container {
+
+} */
 
 table {
     display: block;
-    width: 75%;
-    border-spacing: 2px;
-    border-color: black;
 }
 
 tbody {
     position: relative;
-    flex-direction: column;
-    border-radius: 24px;
-    border: 2px solid black;
 }
 
-tr {
+.tr__header {
     position: relative;
+    gap: 20px;
 }
 
-td {
+.td__header {
     flex: 1 0 80px;
-    padding: 5px;
-    border: 1px solid black;
+    background-color: var(--blueB);
+    padding: 10px;
+    border: 1px solid var(--grey);
     border-radius: 10px;
+    color: var(--purple);
 }

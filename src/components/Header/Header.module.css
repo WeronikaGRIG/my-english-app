@@ -1,5 +1,9 @@
+@import "../../styles/variables.css";
 /* Header */
 .header {
+    display: flex;
+    justify-content: center;
+
     padding: 40px 0;
     min-height: 250px;
 
@@ -41,7 +45,7 @@
     margin-top: 0.5em;
 }
 
-.header-btn {
+.header__btn {
     width: 100px;
     height: 32px;
     padding: 5px;
@@ -50,7 +54,7 @@
     background-color: var(--purple);
 }
 
-.header-btn a {
+.header__btn a {
     color: var(--white);
     font-size: 16px;
     font-weight: 500;

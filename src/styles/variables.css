@@ -18,14 +18,14 @@
 .container {
     margin: 0 auto;
     padding: 0 15px;
-    max-width: 1200px;
+    min-width: 1200px;
 }
 
 .none {
     display: none !important;
 }
 
-.title-1 {
+.title {
     margin-bottom: 60px;
 
     font-size: 60px;
@@ -34,7 +34,7 @@
     color: var(--title-1);
     text-align: center;
 }
-
+/* 
 .title-2 {
     margin-bottom: 20px;
     color: var(--title-1);
@@ -48,4 +48,4 @@
     color: var(--title-1);
     font-size: 32px;
     font-weight: 700;
-}
+} */

@@ -12,7 +12,7 @@
     min-width: 1200px;
 }
 
-.content-wrapper {
+.content {
     background: var(--white);
 
     padding: 30px 0;
@@ -22,7 +22,7 @@
     overflow: hidden;
 }
 
-.content-list {
+.list {
     margin: 0 auto;
     max-width: 570px;
     display: flex;
@@ -32,18 +32,25 @@
     text-align: center;
 }
 
-.content-list__item {
+.list__item {
     font-size: 18px;
     line-height: 1.5;
 }
 
-.content-list__item p {
+.list__item_title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--title-1);
+    text-align: center;
+}
+
+.list__item_text {
     margin-top: 0.5em;
 }
 
 /*перенести в другой компонент */
 
-.content-levels {
+.levels {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -54,7 +61,7 @@
     border-radius: 7px;
 }
 
-.content-levels__btn {
+.levels__btn {
     color: var(--purple);
     font-size: 16px;
     font-weight: 500;

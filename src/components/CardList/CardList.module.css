@@ -1,0 +1,28 @@
+.card__list {
+    width: 250px;
+    height: auto;
+
+    border: 1px solid var(--grey);
+    border-radius: 25px;
+}
+
+.card__list_img {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 30px;
+}
+
+.card__list_title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--title-1);
+    text-align: center;
+}
+
+.card__list_descr {
+    margin: 15px 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--title-1);
+    text-align: center;
+}

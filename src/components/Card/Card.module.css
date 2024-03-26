@@ -1,0 +1,19 @@
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+    min-width: 1200px;
+}
+
+.cards__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 32px;
+}
