@@ -50,7 +50,7 @@
 
 /*перенести в другой компонент */
 
-.levels {
+/* .levels {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -74,4 +74,4 @@
     border: none;
     min-width: auto;
     font-size: 14px;
-}
+} */
