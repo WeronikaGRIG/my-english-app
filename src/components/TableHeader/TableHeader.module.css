@@ -1,15 +1,20 @@
-tr {
+.tr__header {
     position: relative;
+    gap: 20px;
 }
 
-.tr__active {
-    background-color: var(--blue);
-}
-
-td {
+.td__header {
     flex: 1 0 80px;
-    padding: 5px;
-    border: 1px solid black;
+    background-color: var(--blueB);
+    padding: 10px;
+    border: 1px solid var(--grey);
+    color: var(--white);
+}
+
+.td__header_first {
+    background-color: none;
+    padding: 10px;
+    border: none;
 }
 
 .button {

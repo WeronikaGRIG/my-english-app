@@ -1,32 +1,24 @@
 .tables {
     display: flex;
     justify-content: center;
-
-    width: 100%;
+    align-items: center;
 }
 
-/* .container {
+.title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--title-1);
+    text-align: center;
+}
 
-} */
+.descr {
+    margin: 0.5em;
+}
 
-table {
+/* table {
     display: block;
 }
 
 tbody {
     position: relative;
-}
-
-.tr__header {
-    position: relative;
-    gap: 20px;
-}
-
-.td__header {
-    flex: 1 0 80px;
-    background-color: var(--blueB);
-    padding: 10px;
-    border: 1px solid var(--grey);
-    border-radius: 10px;
-    color: var(--purple);
-}
+} */

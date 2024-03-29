@@ -2,6 +2,8 @@
 import styles from './Home.module.css';
 import Card from '../Card/Card';
 import Vocab from '../Vocab/Vocab';
+import Table from '../Table/Table';
+
 
 
 export default function Home() {
@@ -22,8 +24,10 @@ export default function Home() {
                         </div>
                         {/* вынести карточки в отдельный компонент, не забыть про импорты*/}
                         <Card />
-                        {/* ДОМАШНЕЕ ЗАДАНИЕ ЗАДАНИЯ 24 (перенести в отдельную папку и добавить пропсы) */}
+                        {/* ДОМАШНЕЕ ЗАДАНИЕ 24week (перенести в отдельную папку и добавить пропсы) */}
                         <Vocab />
+                        <Table />
+
 
                     </div>
                 </div>
