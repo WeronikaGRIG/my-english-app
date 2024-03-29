@@ -1,9 +1,7 @@
 import img1 from '../src/components/Card/img/card-1.png';
 import img2 from '../src/components/Card/img/card-1.png';
 import img3 from '../src/components/Card/img/card-1.png';
-import img4 from '../src/components/Card/img/card-1.png';
-import img5 from '../src/components/Card/img/card-1.png';
-import img6 from '../src/components/Card/img/card-1.png';
+
 
 
 const data = [
@@ -15,33 +13,15 @@ const data = [
     },
     {
         "id": 2,
-        "title": "Грамматика",
-        "description": "В этом модуле представлены все необходимые правила и разделы английской грамматики",
+        "title": "Слова",
+        "description": "В этом модуле вы сможете учить слова по карточкам ",
         "img": img2
     },
     {
         "id": 3,
-        "title": "Тексты",
-        "description": "Выбири подходящие тексты под свой уровень знания английского языка ",
-        "img": img3
-    },
-    {
-        "id": 4,
-        "title": "Слова",
-        "description": "В этом модуле собраны английские слова с транскрипцией и переводом ",
-        "img": img4
-    },
-    {
-        "id": 5,
-        "title": "Разговорник. основные фразы",
-        "description": "В этом модуле собраны самые популярные выражения и фразы, которые пригодятся в различных ситуациях",
-        "img": img5
-    },
-    {
-        "id": 6,
         "title": "Тесты/Упражнения",
-        "description": "Быстрые онлайн-тесты и упражнения, которые помогут закрепить знание грамматики английского",
-        "img": img6
+        "description": "Быстрые онлайн-тесты и упражнения, которые помогут закрепить знание английского языка",
+        "img": img3
     }
 ]
 export { data };
