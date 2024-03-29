@@ -4,6 +4,11 @@
 
     border: 1px solid var(--grey);
     border-radius: 25px;
+
+    background: #ededed;
+    box-shadow:
+        20px 20px 60px var(--grey),
+        -20px -20px 60px #ffffff;
 }
 
 .card__list_img {

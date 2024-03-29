@@ -1,7 +1,7 @@
 
 import styles from './Home.module.css';
 import Card from '../Card/Card';
-import Table from '../Table/Table';
+import Vocab from '../Vocab/Vocab';
 
 
 export default function Home() {
@@ -22,7 +22,8 @@ export default function Home() {
                         </div>
                         {/* вынести карточки в отдельный компонент, не забыть про импорты*/}
                         <Card />
-                        <Table />
+                        {/* ДОМАШНЕЕ ЗАДАНИЕ ЗАДАНИЯ 24 (перенести в отдельную папку и добавить пропсы) */}
+                        <Vocab />
 
                     </div>
                 </div>
