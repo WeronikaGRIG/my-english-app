@@ -14,6 +14,7 @@ export default function Vocab() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const containerRef = useRef(null);
 
+    // Прокрутка карточек при клике на кнопки влево/вправо
     const handleNext = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % list.length);
     };
@@ -21,7 +22,7 @@ export default function Vocab() {
     const handlePrev = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + list.length) % list.length);
     };
-
+    // Изменение нумерации в зависимости от клика влево/вправо
     const handlePageChange = (page) => {
         setCurrentIndex(page - 1);
     };
