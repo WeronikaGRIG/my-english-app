@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { list } from '../../list';
 
 import VocabArrowRight from '../VocabArrowRight/VocabArrowRight'
@@ -12,6 +12,7 @@ import styles from './Vocab.module.css'
 export default function Vocab() {
 
     const [currentIndex, setCurrentIndex] = useState(0);
+    const containerRef = useRef(null);
 
     const handleNext = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % list.length);
@@ -25,12 +26,22 @@ export default function Vocab() {
         setCurrentIndex(page - 1);
     };
 
+    useEffect(() => {
+        // Прокрутка к текущей карточке при изменении индекса
+        if (containerRef.current) {
+            containerRef.current.children[currentIndex].scrollIntoView({ behavior: 'smooth' });
+        }
+    }, [currentIndex]);
+
+
+
     return (
         <div className={styles.container}>
             <VocabArrowRight
                 onClick={handlePrev} />
 
-            <div className={styles.vocabs__wrapper}>
+            <div className={styles.vocabs__wrapper}
+            >
                 <ul className={styles.vocab}>
                     <VocabList
                         key={currentIndex}
