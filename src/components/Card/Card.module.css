@@ -1,13 +1,11 @@
 .container {
-    margin: 0 auto;
-    padding: 0 15px;
-    min-width: 1200px;
-}
-
-.cards__wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    margin: 0 auto;
+    padding: 0 15px;
+    min-width: 1200px;
 }
 
 .card {

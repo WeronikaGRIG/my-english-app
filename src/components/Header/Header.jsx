@@ -15,7 +15,6 @@ export default function Header() {
                         <div className={styles.header__text}>
                             <p>Приготовтесь к увлекательному путешествию по изучению английского языка!</p>
                         </div>
-                        <button className={styles.header__btn}><a href="#!">Войти</a></button>
                     </div>
                 </div>
             </header>

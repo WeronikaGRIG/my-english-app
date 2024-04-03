@@ -14,7 +14,6 @@ export default function Home() {
                     <div className={styles.list}>
                         <div className={styles.list__item}>
                             <h3 className={styles.list__item_title}>Выбери технику изучения</h3>
-                            <p className={styles.list__item_text}>Выбери свой уровень и технику, которую будешь сегодня изучать. </p>
                         </div>
                         {/* вынести карточки в отдельный компонент, не забыть про импорты*/}
                         <Card />

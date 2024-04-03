@@ -44,19 +44,3 @@
 .header__text p + p {
     margin-top: 0.5em;
 }
-
-.header__btn {
-    width: 100px;
-    height: 32px;
-    padding: 5px;
-
-    border-radius: 7px;
-    background-color: var(--purple);
-}
-
-.header__btn a {
-    color: var(--white);
-    font-size: 16px;
-    font-weight: 500;
-    font-family: "Poppins", sans-serif;
-}
