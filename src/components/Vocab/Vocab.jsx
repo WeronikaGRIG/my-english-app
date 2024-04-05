@@ -28,36 +28,41 @@ export default function Vocab() {
     };
 
     useEffect(() => {
-        // Прокрутка к текущей карточке при изменении индекса
         if (containerRef.current) {
             containerRef.current.children[currentIndex].scrollIntoView({ behavior: 'smooth' });
         }
     }, [currentIndex]);
 
 
-
     return (
-        <div className={styles.container}>
-            <VocabArrowRight
-                onClick={handlePrev} />
+        <main className={styles.main}>
+            <div className={styles.container}>
 
-            <div className={styles.vocabs__wrapper}
-            >
-                <ul className={styles.vocab}>
-                    <VocabList
-                        key={currentIndex}
-                        {...list[currentIndex]} />
-                </ul>
+                <div className={styles.wrapper}>
+                    <h3 className={styles.title}>Слова</h3>
+                    <div className={styles.vocabs__wrapper}>
 
-                <VocabPagination
-                    totalCount={list.length}
-                    currentIndex={currentIndex}
-                    onPageChange={handlePageChange} />
+                        <VocabArrowRight
+                            onClick={handlePrev} />
+
+                        <ul className={styles.vocab}>
+                            <VocabList
+                                key={currentIndex}
+                                {...list[currentIndex]} />
+                        </ul>
+
+                        <VocabArrowLeft
+                            onClick={handleNext} />
+
+                    </div>
+
+                    <VocabPagination
+                        totalCount={list.length}
+                        currentIndex={currentIndex}
+                        onPageChange={handlePageChange} />
+
+                </div>
             </div>
-
-            <VocabArrowLeft
-                onClick={handleNext} />
-
-        </div>
+        </main>
     )
 }

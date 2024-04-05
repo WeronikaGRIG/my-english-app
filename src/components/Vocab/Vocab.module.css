@@ -1,15 +1,39 @@
-.container {
+.main {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background-color: var(--blueB);
+}
+
+.container {
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 40px 15px;
     min-width: 1200px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--white);
+
+    padding: 30px 0;
+    border: 1px solid var(--grey);
+    border-radius: 40px;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--title-1);
+    text-align: center;
 }
 
 .vocabs__wrapper {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 
@@ -20,4 +44,6 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    margin: 50px;
 }

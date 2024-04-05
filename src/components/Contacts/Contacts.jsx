@@ -1,26 +1,28 @@
-
+import styles from './Contacts.module.css';
 
 export default function Contacts() {
     return (
-        <main className="section">
-            <div className="container">
-                <h1 className="title-1">Contacts</h1>
+        <main className={styles.main}>
+            <div className={styles.container}>
 
-                <ul className="content-list">
-                    <li className="content-list__item">
-                        <h2 className="title-2">Location</h2>
-                        <p>Poland</p>
-                    </li>
-                    <li className="content-list__item">
-                        <h2 className="title-2">Telegram / WhatsApp</h2>
-                        <p><a href="tel:+480000000">+48 (00) 000 000</a></p>
-                    </li>
-                    <li className="content-list__item">
-                        <h2 className="title-2">Email</h2>
-                        <p><a href="mailto:veronikaudot@gmail.com">veronikaudot@gmail.com</a></p>
-                    </li>
-                </ul>
 
+                <div className={styles.wrapper}>
+                    <h1 className={styles.title}>Контакты</h1>
+                    <ul className={styles.content}>
+                        <li className={styles.content__item}>
+                            <h2 className={styles.title}>Локация</h2>
+                            <p>Poland</p>
+                        </li>
+                        <li className={styles.content__item}>
+                            <h2 className={styles.title}>Telegram / WhatsApp</h2>
+                            <p><a href="tel:+480000000">+48 (00) 000 000</a></p>
+                        </li>
+                        <li className={styles.content__item}>
+                            <h2 className={styles.title}>Email</h2>
+                            <p><a href="mailto:veronikaudot@gmail.com">veronikaudot@gmail.com</a></p>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </main>
     )

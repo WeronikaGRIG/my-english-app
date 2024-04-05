@@ -1,14 +1,8 @@
-@import "../../styles/variables.css";
-/* Header */
 .header {
     display: flex;
     justify-content: center;
-
-    padding: 40px 0;
-    min-height: 250px;
-
+    padding-top: 40px;
     display: flex;
-
     background-color: var(--blueB);
     /* border: 1px solid var(--header-border); */
     color: var(--white);
@@ -36,7 +30,6 @@
 }
 
 .header__text {
-    margin-bottom: 40px;
     font-size: 18px;
     line-height: 1.333;
 }
