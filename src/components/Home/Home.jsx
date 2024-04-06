@@ -18,11 +18,7 @@ export default function Home() {
                             <div className={styles.list__item}>
                                 <h3 className={styles.list__item_title}>Выбери технику изучения</h3>
                             </div>
-                            {/* вынести карточки в отдельный компонент, не забыть про импорты*/}
                             <Card />
-                            {/* ДОМАШНЕЕ ЗАДАНИЕ 24week (перенести в отдельную папку и добавить пропсы) */}
-                            {/* <Vocab />
-                            <Table /> */}
                         </div>
                     </div>
                 </div>
