@@ -3,7 +3,7 @@ import styles from './NavBar.module.css';
 import { useState, useEffect } from 'react';
 
 export default function NavBar() {
-
+    // хук для закрепления панели навигации в верху страницы при скролле
     const [isSticky, setSticky] = useState(false);
 
     useEffect(() => {
