@@ -12,6 +12,7 @@ import styles from './Vocab.module.css'
 export default function Vocab() {
 
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [learnedWordsCount, setLearnedWordsCount] = useState(0);
     const containerRef = useRef(null);
 
     // Прокрутка карточек при клике на кнопки влево/вправо
@@ -25,6 +26,11 @@ export default function Vocab() {
     // Изменение нумерации в зависимости от клика влево/вправо
     const handlePageChange = (page) => {
         setCurrentIndex(page - 1);
+    };
+
+    //Функция для счетчика изучения слов
+    const onCheckTranslation = () => {
+        setLearnedWordsCount(prevCount => prevCount + 1)
     };
 
     useEffect(() => {
@@ -48,7 +54,10 @@ export default function Vocab() {
                         <ul className={styles.vocab}>
                             <VocabList
                                 key={currentIndex}
-                                {...list[currentIndex]} />
+                                {...list[currentIndex]}
+                                onCheckTranslation={onCheckTranslation}
+                                learnedWordsCount={learnedWordsCount}
+                            />
                         </ul>
 
                         <VocabArrowLeft
