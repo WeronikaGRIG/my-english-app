@@ -1,28 +1,36 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--blueB);
+}
+
 .container {
+    margin: 0 auto;
+    padding: 40px 15px;
+    min-width: 1200px;
+}
+
+.wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
-    padding: 0 15px;
-    min-width: 1200px;
+    background: var(--white);
+
+    padding: 30px 0;
+    border: 1px solid var(--grey);
+    border-radius: 40px;
 }
 
 .title {
     font-size: 32px;
     font-weight: 700;
-    color: var(--title-1);
+    color: var(--purple);
     text-align: center;
 }
 
-.descr {
-    margin: 0.5em;
+.table {
+    margin: 30px;
 }
-
-/* table {
-    display: block;
-}
-
-tbody {
-    position: relative;
-} */
