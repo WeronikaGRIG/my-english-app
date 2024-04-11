@@ -23,6 +23,10 @@
     color: var(--purple);
 }
 
+.input__error {
+    border: 1px solid red;
+}
+
 .td__edit_btn {
     display: flex;
     flex-direction: row;
