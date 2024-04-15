@@ -5,6 +5,7 @@ import styles from './TableRowEditor.module.css'
 export default function TableRowEditor({ onCancelEdit, onFieldChange, onSave, newWord, setNewWord, handleAddWord }) {
     const [errors, setErrors] = useState({});
 
+    //изменение состояния поля ввода
     const handleChange = (e) => {
         const { name, value } = e.target;
         if (name === 'word' || name === 'transcript' || name === 'translation') {
@@ -24,6 +25,7 @@ export default function TableRowEditor({ onCancelEdit, onFieldChange, onSave, ne
         }
     };
 
+    //сохранение нового поля, проверка наличия ошибок валидации
     const handleSave = () => {
         if (Object.values(errors).some(error => error)) {
             console.log('Ошибка: Не все поля заполнены.');
@@ -65,7 +67,7 @@ export default function TableRowEditor({ onCancelEdit, onFieldChange, onSave, ne
 
                 <button className={styles.td__btn}
                     onClick={handleSave}
-                >Сохранить</button>
+                    disabled={Object.values(errors).some(error => error)}>Сохранить</button>
                 <button className={styles.td__btn}
                     onClick={onCancelEdit}>Отмена</button>
 

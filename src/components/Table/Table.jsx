@@ -18,6 +18,7 @@ export default function Table() {
     //ошибки валидации
     const [errors, setErrors] = useState({});
 
+
     //редактировать строки таблицы
     const handleEdit = () => {
         setEditing(true);
@@ -49,11 +50,22 @@ export default function Table() {
             console.log('Ошибка: Не все поля заполнены.');
             return;
         }
-        // Обработка сохранения изменений
-        console.log('Сохраненные данные:', editedFields);
-        setEditing(false);
-        setEditedFields({});
-        setErrors({});
+        // Проверка наличия изменений перед сохранением
+        if (Object.keys(editedFields).length === 0) {
+            console.log('нет изменений.');
+            return;
+        }
+
+        try {
+            // Обработка сохранения изменений, проверка
+            console.log('Сохраненные данные:', editedFields);
+            setEditing(false);
+            setEditedFields({});
+            setErrors({});
+        } catch (error) {
+            console.error('Ошибка при сохранении:', error);
+        }
+
     };
 
     //оботчик добавления нового слова
@@ -62,8 +74,13 @@ export default function Table() {
             console.log('Ошибка: Не все поля заполнены.');
             return;
         }
-        setWordsList(prevList => [...prevList, newWord]);
-        setNewWord({ word: '', transcript: '', translation: '' })
+
+        try {
+            setWordsList(prevList => [...prevList, newWord]);
+            setNewWord({ word: '', transcript: '', translation: '' })
+        } catch (error) {
+            console.error('Ошибка при сохранении:', error);
+        }
     };
 
     return (
@@ -101,7 +118,6 @@ export default function Table() {
                             <button className={styles.td__btn} onClick={handleEdit}>Добавить слово</button>
                         </div>
                     )}
-
                 </div>
             </div>
         </main>
