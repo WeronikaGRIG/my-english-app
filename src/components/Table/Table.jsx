@@ -7,23 +7,30 @@ import TableRowEditor from '../TableRowEditor/TableRowEditor';
 
 
 export default function Table() {
-
+    //для отслеживания редактирования
     const [isEditing, setEditing] = useState(false);
+    //изменения полей
     const [editedFields, setEditedFields] = useState({});
-    const [list, setList] = useState([]);
+    //добавления нового слова
     const [newWord, setNewWord] = useState({ word: '', transcription: '', translation: '' });
+    //список слов
+    const [wordsList, setWordsList] = useState(list);
+    //ошибки валидации
     const [errors, setErrors] = useState({});
 
+    //редактировать строки таблицы
     const handleEdit = () => {
         setEditing(true);
     };
 
+    //отменяет редактирование
     const handleCancelEdit = () => {
         setEditing(false);
         setEditedFields({});
         setErrors({});
     };
 
+    //обработчик изменения поля
     const handleFiedChange = (fieldName, value) => {
         setEditedFields(prevState => ({
             ...prevState,
@@ -35,6 +42,7 @@ export default function Table() {
         }));
     };
 
+    //обраьлтчик сохранений изменений
     const handleSave = () => {
         if (Object.values(errors).some(error => error)) {
             console.log('Ошибка: Не все поля заполнены.');
@@ -47,14 +55,15 @@ export default function Table() {
         setErrors({});
     };
 
+    //оботчик добавления нового слова
     const handleAddWord = () => {
         if (Object.values(errors).some(error => error)) {
             console.log('Ошибка: Не все поля заполнены.');
             return;
         }
-        setList(prevList => [...prevList, newWord]);
+        setWordsList(prevList => [...prevList, newWord]);
         setNewWord({ word: '', transcription: '', translation: '' })
-    }
+    };
 
     return (
 
@@ -73,14 +82,17 @@ export default function Table() {
                                     onFieldChange={handleFiedChange}
                                     onSave={handleSave}
                                     newWord={newWord}
-                                    setNewWord={setNewWord} />
+                                    setNewWord={setNewWord}
+                                    handleAddWord={handleAddWord}
+                                />
                             ) : null}
 
-                            {list.map((word, index) => {
+                            {wordsList.map((word, index) => {
                                 return (
                                     <TableList key={index} {...word} />
                                 )
                             })}
+
                         </tbody>
                     </table>
                     {!isEditing && (
