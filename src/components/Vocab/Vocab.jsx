@@ -5,8 +5,10 @@ import VocabArrowRight from '../VocabArrowRight/VocabArrowRight'
 import VocabArrowLeft from '../VocabArowLeft/VocabArrowLeft';
 import VocabList from '../VocabList/VocabList';
 import VocabPagination from '../VocabPagination/VocabPagination';
+import VocabStats from '../VocabStats/VocabStats';
 
 import styles from './Vocab.module.css'
+
 
 
 export default function Vocab() {
@@ -28,7 +30,7 @@ export default function Vocab() {
         setCurrentIndex(page - 1);
     };
 
-    //Функция для счетчика изучения слов
+    //Cчетчик изучения слов
     const onCheckTranslation = () => {
         setLearnedWordsCount(prevCount => prevCount + 1)
     };
@@ -46,6 +48,7 @@ export default function Vocab() {
 
                 <div className={styles.wrapper}>
                     <h3 className={styles.title}>Слова</h3>
+                    <VocabStats learnedWordsCount={learnedWordsCount} />
                     <div className={styles.vocabs__wrapper}>
 
                         <VocabArrowRight
@@ -56,7 +59,6 @@ export default function Vocab() {
                                 key={currentIndex}
                                 {...list[currentIndex]}
                                 onCheckTranslation={onCheckTranslation}
-                                learnedWordsCount={learnedWordsCount}
                             />
                         </ul>
 
