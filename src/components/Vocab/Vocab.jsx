@@ -9,8 +9,6 @@ import VocabStats from '../VocabStats/VocabStats';
 
 import styles from './Vocab.module.css'
 
-
-
 export default function Vocab() {
 
     const [currentIndex, setCurrentIndex] = useState(0);

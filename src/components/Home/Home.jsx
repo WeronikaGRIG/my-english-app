@@ -1,8 +1,6 @@
 
 import styles from './Home.module.css';
 import Card from '../Card/Card';
-// import Vocab from '../Vocab/Vocab';
-// import Table from '../Table/Table';
 import Header from '../Header/Header';
 
 

@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import TableList from '../TableList/TableList';
 import { list } from '../../list';
-import styles from './Table.module.css';
+import TableList from '../TableList/TableList';
 import TableHeader from '../TableHeader/TableHeader';
 import TableRowEditor from '../TableRowEditor/TableRowEditor';
 
+import styles from './Table.module.css';
 
 export default function Table() {
     //для отслеживания редактирования

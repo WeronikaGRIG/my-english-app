@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
-import styles from './NavBar.module.css';
 import { useState, useEffect } from 'react';
+
+import styles from './NavBar.module.css';
 
 export default function NavBar() {
     // хук для закрепления панели навигации в верху страницы при скролле
@@ -32,8 +33,8 @@ export default function NavBar() {
 
                     {/* вынести кнопку в отдельный компонент */}
 
-                    <button className={styles.mode__btn}><a href="#!" className={styles.btn}>Войти</a></button>
-                    <button className={styles.mode__btn}><a href="#!">Авторизоваться</a></button>
+                    {/* <button className={styles.mode__btn}><a href="#!" className={styles.btn}>Войти</a></button>
+                    <button className={styles.mode__btn}><a href="#!">Авторизоваться</a></button> */}
 
                     <ul className={styles.nav__list}>
                         <li className={styles.nav__list_item}>
@@ -41,7 +42,7 @@ export default function NavBar() {
                         <li className={styles.nav__list_item}>
                             <Link to="/vocabs" className={styles.nav__list_link}>Учить слова</Link></li>
                         <li className={styles.nav__list_item}>
-                            <Link to="/contacts" className={styles.nav__list_link}>Контакты</Link></li>
+                            <Link to="/tables" className={styles.nav__list_link}>Самоучитель</Link></li>
                     </ul>
                 </div>
             </div>

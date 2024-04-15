@@ -1,5 +1,6 @@
 
 import { useState } from 'react';
+
 import styles from './TableList.module.css';
 
 export default function TableList({ word, transcript, translation }) {

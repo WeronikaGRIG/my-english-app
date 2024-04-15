@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from 'react';
 import styles from './VocabList.module.css';
 
 
-
 export default function VocabList({ word, transcript, translation, onCheckTranslation }) {
 
     const [isHoverVocab, setHoverVocab] = useState(true);
