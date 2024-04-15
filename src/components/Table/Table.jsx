@@ -12,7 +12,7 @@ export default function Table() {
     //изменения полей
     const [editedFields, setEditedFields] = useState({});
     //добавления нового слова
-    const [newWord, setNewWord] = useState({ word: '', transcription: '', translation: '' });
+    const [newWord, setNewWord] = useState({ word: '', transcript: '', translation: '' });
     //список слов
     const [wordsList, setWordsList] = useState(list);
     //ошибки валидации
@@ -27,6 +27,7 @@ export default function Table() {
     const handleCancelEdit = () => {
         setEditing(false);
         setEditedFields({});
+        setNewWord({ word: '', transcript: '', translation: '' })
         setErrors({});
     };
 
@@ -62,7 +63,7 @@ export default function Table() {
             return;
         }
         setWordsList(prevList => [...prevList, newWord]);
-        setNewWord({ word: '', transcription: '', translation: '' })
+        setNewWord({ word: '', transcript: '', translation: '' })
     };
 
     return (
@@ -98,11 +99,6 @@ export default function Table() {
                     {!isEditing && (
                         <div className={styles.button}>
                             <button className={styles.td__btn} onClick={handleEdit}>Добавить слово</button>
-                        </div>
-                    )}
-                    {isEditing && (
-                        <div className={styles.button}>
-                            <button className={styles.td__btn} onClick={handleAddWord}>Добавить слово</button>
                         </div>
                     )}
 

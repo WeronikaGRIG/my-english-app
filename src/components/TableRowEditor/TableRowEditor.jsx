@@ -7,7 +7,7 @@ export default function TableRowEditor({ onCancelEdit, onFieldChange, onSave, ne
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        if (name === 'word' || name === 'transcription' || name === 'translation') {
+        if (name === 'word' || name === 'transcript' || name === 'translation') {
             onFieldChange(name, value);
 
             //сосстояние newWord при изменении поля ввода 
@@ -48,9 +48,9 @@ export default function TableRowEditor({ onCancelEdit, onFieldChange, onSave, ne
             <td className={styles.td__edit}>
                 <input
                     type="text"
-                    name="transcription"
-                    className={`${styles.td__input} ${errors.transcription ? styles.input__error : ''}`}
-                    value={newWord.transcription || ''}
+                    name="transcript"
+                    className={`${styles.td__input} ${errors.transcript ? styles.input__error : ''}`}
+                    value={newWord.transcript || ''}
                     onChange={handleChange} />
             </td>
             <td className={styles.td__edit}>
