@@ -13,24 +13,29 @@ export default function Vocab() {
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [learnedWordsCount, setLearnedWordsCount] = useState(0);
+
     const containerRef = useRef(null);
 
     // Прокрутка карточек при клике на кнопки влево/вправо
     const handleNext = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % list.length);
+
     };
 
     const handlePrev = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + list.length) % list.length);
+
     };
     // Изменение нумерации в зависимости от клика влево/вправо
     const handlePageChange = (page) => {
         setCurrentIndex(page - 1);
+
     };
 
     //Cчетчик изучения слов
     const onCheckTranslation = () => {
-        setLearnedWordsCount(prevCount => prevCount + 1)
+        setLearnedWordsCount(prevCount => prevCount + 1);
+
     };
 
     useEffect(() => {

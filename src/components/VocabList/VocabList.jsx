@@ -6,11 +6,16 @@ import styles from './VocabList.module.css';
 export default function VocabList({ word, transcript, translation, onCheckTranslation }) {
 
     const [isHoverVocab, setHoverVocab] = useState(true);
+    const [isTranslationShown, setTranslationShown] = useState(false)
     const translationButtonRef = useRef(null)
 
     const handleClick = () => {
         setHoverVocab(!isHoverVocab);
-        onCheckTranslation();
+        if (!isTranslationShown) {
+            setTranslationShown(true);
+            onCheckTranslation();
+        }
+
     };
 
     useEffect(() => {
