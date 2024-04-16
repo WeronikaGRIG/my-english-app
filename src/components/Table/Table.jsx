@@ -89,21 +89,28 @@ export default function Table() {
             <div className={styles.container}>
                 <div className={styles.wrapper}>
                     <h3 className={styles.title}>Самоучитель</h3>
+
+                    {!isEditing && (
+                        <div className={styles.button}>
+                            <button className={styles.td__btn} onClick={handleEdit}>Добавить слово</button>
+                        </div>
+                    )}
+
+                    {isEditing ? (
+                        <TableRowEditor
+                            editedFields={editedFields}
+                            onCancelEdit={handleCancelEdit}
+                            onFieldChange={handleFiedChange}
+                            onSave={handleSave}
+                            newWord={newWord}
+                            setNewWord={setNewWord}
+                            handleAddWord={handleAddWord}
+                        />
+                    ) : null}
+
                     <table className={styles.table}>
                         <tbody className={styles.tbody}>
                             <TableHeader />
-
-                            {isEditing ? (
-                                <TableRowEditor
-                                    editedFields={editedFields}
-                                    onCancelEdit={handleCancelEdit}
-                                    onFieldChange={handleFiedChange}
-                                    onSave={handleSave}
-                                    newWord={newWord}
-                                    setNewWord={setNewWord}
-                                    handleAddWord={handleAddWord}
-                                />
-                            ) : null}
 
                             {wordsList.map((word, index) => {
                                 return (
@@ -113,11 +120,6 @@ export default function Table() {
 
                         </tbody>
                     </table>
-                    {!isEditing && (
-                        <div className={styles.button}>
-                            <button className={styles.td__btn} onClick={handleEdit}>Добавить слово</button>
-                        </div>
-                    )}
                 </div>
             </div>
         </main>

@@ -63,15 +63,11 @@ export default function TableRowEditor({ onCancelEdit, onFieldChange, onSave, ne
                     onChange={handleChange} />
             </td>
 
-            <td className={styles.button}>
-
-                <button className={styles.td__btn}
-                    onClick={handleSave}
-                    disabled={Object.values(errors).some(error => error)}>Сохранить</button>
-                <button className={styles.td__btn}
-                    onClick={onCancelEdit}>Отмена</button>
-
-            </td>
+            <button className={styles.td__btn}
+                onClick={handleSave}
+                disabled={Object.values(errors).some(error => error)}>Сохранить</button>
+            <button className={styles.td__btn}
+                onClick={onCancelEdit}>Отмена</button>
         </tr>
     )
 }
