@@ -2,6 +2,7 @@
 import styles from './Home.module.css';
 import Card from '../Card/Card';
 import Header from '../Header/Header';
+import ExerciseOne from '../ExerciseOne/ExerciseOne';
 
 
 
@@ -17,6 +18,7 @@ export default function Home() {
                                 <h3 className={styles.list__item_title}>Выбери технику изучения</h3>
                             </div>
                             <Card />
+                            <ExerciseOne />
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,23 @@
+.input {
+    max-width: 100%;
+    padding: 5px;
+
+    background-color: var(--grey);
+    border: none;
+    border-radius: 7px;
+    box-shadow: 2px 2px 7px 0 rgb(0, 0, 0, 0.2);
+    outline: none;
+    color: var(--purple);
+}
+
+.btn {
+    /* width: 100px;
+    height: 32px; */
+
+    padding: 10px;
+    margin: 3px auto;
+
+    border-radius: 7px;
+    background-color: var(--purple);
+    color: var(--white);
+}

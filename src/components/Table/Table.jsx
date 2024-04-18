@@ -8,7 +8,7 @@ import styles from './Table.module.css';
 
 export default function Table() {
     //для отслеживания редактирования
-    const [isEditing, setEditing] = useState(false);
+    // const [isEditing, setEditing] = useState(false);
     //изменения полей
     const [editedFields, setEditedFields] = useState({});
     //добавления нового слова
@@ -20,13 +20,13 @@ export default function Table() {
 
 
     //редактировать строки таблицы
-    const handleEdit = () => {
-        setEditing(true);
-    };
+    // const handleEdit = () => {
+    //     setEditing(true);
+    // };
 
     //отменяет редактирование
     const handleCancelEdit = () => {
-        setEditing(false);
+        // setEditing(false);
         setEditedFields({});
         setNewWord({ word: '', transcript: '', translation: '' })
         setErrors({});
@@ -59,7 +59,7 @@ export default function Table() {
         try {
             // Обработка сохранения изменений, проверка
             console.log('Сохраненные данные:', editedFields);
-            setEditing(false);
+            // setEditing(false);
             setEditedFields({});
             setErrors({});
         } catch (error) {
@@ -90,23 +90,22 @@ export default function Table() {
                 <div className={styles.wrapper}>
                     <h3 className={styles.title}>Самоучитель</h3>
 
-                    {!isEditing && (
-                        <div className={styles.button}>
-                            <button className={styles.td__btn} onClick={handleEdit}>Добавить слово</button>
-                        </div>
-                    )}
 
-                    {isEditing ? (
-                        <TableRowEditor
-                            editedFields={editedFields}
-                            onCancelEdit={handleCancelEdit}
-                            onFieldChange={handleFiedChange}
-                            onSave={handleSave}
-                            newWord={newWord}
-                            setNewWord={setNewWord}
-                            handleAddWord={handleAddWord}
-                        />
-                    ) : null}
+                    {/* <div className={styles.button}>
+                        <button className={styles.td__btn}>Добавить слово</button>
+                    </div> */}
+
+
+                    <TableRowEditor
+                        editedFields={editedFields}
+                        onCancelEdit={handleCancelEdit}
+                        onFieldChange={handleFiedChange}
+                        onSave={handleSave}
+                        newWord={newWord}
+                        setNewWord={setNewWord}
+                        handleAddWord={handleAddWord}
+                    />
+
 
                     <table className={styles.table}>
                         <tbody className={styles.tbody}>
