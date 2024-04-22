@@ -2,11 +2,11 @@
 
 import styles from './Footer.module.css';
 
-import Vk from '../SocialIcons/VkIcon/VkIcon';
-import Instagram from '../SocialIcons/InstaIcon/InstaIcon';
-import Twitter from '../SocialIcons/Twitter/Twitter';
-import LinkedIn from '../SocialIcons/LinkedIn/Linkedin';
-import GitHub from '../SocialIcons/GitHub/GitHub';
+import VkIcon from '../SocialIcons/VkIcon/VkIcon';
+import InstaIcon from '../SocialIcons/InstaIcon/InstaIcon';
+import TwitterIcon from '../SocialIcons/TwitterIcon/Twitter';
+import LinkedinIcon from '../SocialIcons/LinkedInIcon/Linkedin';
+import GitHubicon from '../SocialIcons/GitHubIcon/GitHub';
 
 export default function Footer() {
     return (
@@ -14,11 +14,11 @@ export default function Footer() {
             <div className={styles.container}>
                 <div className={styles.footer__wrapper}>
                     <ul className={styles.social}>
-                        <li className={styles.social__item}><a href="#!"><Vk /></a></li>
-                        <li className={styles.social__item}><a href="#!"><Instagram /></a></li>
-                        <li className={styles.social__item}><a href="#!"><Twitter /></a></li>
-                        <li className={styles.social__item}><a href="#!"><LinkedIn /></a></li>
-                        <li className={styles.social__item}><a href="#!"><GitHub /></a></li>
+                        <li className={styles.social__item}><a href="#!"><VkIcon /></a></li>
+                        <li className={styles.social__item}><a href="#!"><InstaIcon /></a></li>
+                        <li className={styles.social__item}><a href="#!"><TwitterIcon /></a></li>
+                        <li className={styles.social__item}><a href="#!"><LinkedinIcon /></a></li>
+                        <li className={styles.social__item}><a href="#!"><GitHubicon /></a></li>
                     </ul>
                     <div className={styles.copyright}>
                         <p>© 2024</p>

@@ -1,6 +1,6 @@
 import { ReactComponent as LinkedIn } from '../icons/linkedIn.svg';
 
-export default function VkIcon() {
+export default function LinkedinIcon() {
     return (
         <LinkedIn />
     )
