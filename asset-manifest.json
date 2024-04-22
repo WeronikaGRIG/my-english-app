@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-english-app/static/css/main.12291b36.css",
-    "main.js": "/my-english-app/static/js/main.d016a84d.js",
+    "main.css": "/my-english-app/static/css/main.fd38ef4a.css",
+    "main.js": "/my-english-app/static/js/main.80664d70.js",
     "static/js/453.28530e0e.chunk.js": "/my-english-app/static/js/453.28530e0e.chunk.js",
     "static/media/card-1.png": "/my-english-app/static/media/card-1.db6c54510e881581d397.png",
     "static/media/gitHub.svg": "/my-english-app/static/media/gitHub.db1e3cfa3aa61658d837d82e113dc1fe.svg",
@@ -10,12 +10,12 @@
     "static/media/twitter.svg": "/my-english-app/static/media/twitter.d4b0a40866d7b735834b96db6728afc1.svg",
     "static/media/linkedIn.svg": "/my-english-app/static/media/linkedIn.c05a2ae5b158581b0f27510e1d79e379.svg",
     "index.html": "/my-english-app/index.html",
-    "main.12291b36.css.map": "/my-english-app/static/css/main.12291b36.css.map",
-    "main.d016a84d.js.map": "/my-english-app/static/js/main.d016a84d.js.map",
+    "main.fd38ef4a.css.map": "/my-english-app/static/css/main.fd38ef4a.css.map",
+    "main.80664d70.js.map": "/my-english-app/static/js/main.80664d70.js.map",
     "453.28530e0e.chunk.js.map": "/my-english-app/static/js/453.28530e0e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.12291b36.css",
-    "static/js/main.d016a84d.js"
+    "static/css/main.fd38ef4a.css",
+    "static/js/main.80664d70.js"
   ]
 }
