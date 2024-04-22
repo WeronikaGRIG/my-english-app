@@ -13,10 +13,6 @@ export default function Table() {
     const [editedFields, setEditedFields] = useState({});
     //добавления нового слова
     const [newWord, setNewWord] = useState({ word: '', transcript: '', translation: '' });
-    //список слов
-    const [wordsList, setWordsList] = useState(list);
-    //ошибки валидации
-    const [errors, setErrors] = useState({});
 
 
     //редактировать строки таблицы
