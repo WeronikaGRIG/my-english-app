@@ -64,7 +64,6 @@ export default function Table() {
                         </button>
                     </div>
 
-
                     {isAdding && <TableRowEditor
                         onFieldChange={handleFiedChange}
                         onSave={handleSave}
@@ -76,7 +75,6 @@ export default function Table() {
                         errors={errors}
                         setErrors={setErrors}
                     />}
-
 
                     <table className={styles.table}>
                         <tbody className={styles.tbody}>
