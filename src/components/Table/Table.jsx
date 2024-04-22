@@ -7,26 +7,14 @@ import TableRowEditor from '../TableRowEditor/TableRowEditor';
 import styles from './Table.module.css';
 
 export default function Table() {
-    //для отслеживания редактирования
-    // const [isEditing, setEditing] = useState(false);
-    //изменения полей
-    const [editedFields, setEditedFields] = useState({});
+    //список слов
+    const [wordsList, setWordsList] = useState(list);
     //добавления нового слова
     const [newWord, setNewWord] = useState({ word: '', transcript: '', translation: '' });
-
-
-    //редактировать строки таблицы
-    // const handleEdit = () => {
-    //     setEditing(true);
-    // };
-
-    //отменяет редактирование
-    const handleCancelEdit = () => {
-        // setEditing(false);
-        setEditedFields({});
-        setNewWord({ word: '', transcript: '', translation: '' })
-        setErrors({});
-    };
+    const [editedFields, setEditedFields] = useState({});
+    const [isAdding, setIsAdding] = useState(false);
+    //ошибки валидации
+    const [errors, setErrors] = useState({});
 
     //обработчик изменения поля
     const handleFiedChange = (fieldName, value) => {
@@ -42,41 +30,22 @@ export default function Table() {
 
     //обраьлтчик сохранений изменений
     const handleSave = () => {
-        if (Object.values(errors).some(error => error)) {
-            console.log('Ошибка: Не все поля заполнены.');
-            return;
-        }
-        // Проверка наличия изменений перед сохранением
-        if (Object.keys(editedFields).length === 0) {
-            console.log('нет изменений.');
-            return;
-        }
-
-        try {
-            // Обработка сохранения изменений, проверка
-            console.log('Сохраненные данные:', editedFields);
-            // setEditing(false);
-            setEditedFields({});
-            setErrors({});
-        } catch (error) {
-            console.error('Ошибка при сохранении:', error);
-        }
+        setWordsList(prevList => [...prevList, newWord]);
+        setNewWord({ word: '', transcript: '', translation: '' });
+        setIsAdding(false);
 
     };
 
     //оботчик добавления нового слова
     const handleAddWord = () => {
-        if (Object.values(errors).some(error => error)) {
-            console.log('Ошибка: Не все поля заполнены.');
-            return;
-        }
+        setIsAdding(true);
+    };
 
-        try {
-            setWordsList(prevList => [...prevList, newWord]);
-            setNewWord({ word: '', transcript: '', translation: '' })
-        } catch (error) {
-            console.error('Ошибка при сохранении:', error);
-        }
+    //отменяет редактирование
+    const handleCancelEdit = () => {
+        setIsAdding(false);
+        setNewWord({ word: '', transcript: '', translation: '' });
+        setErrors({});
     };
 
     return (
@@ -87,20 +56,26 @@ export default function Table() {
                     <h3 className={styles.title}>Самоучитель</h3>
 
 
-                    {/* <div className={styles.button}>
-                        <button className={styles.td__btn}>Добавить слово</button>
-                    </div> */}
+                    <div className={styles.button}>
+                        <button
+                            className={styles.td__btn}
+                            onClick={handleAddWord}>
+                            Добавить слово
+                        </button>
+                    </div>
 
 
-                    <TableRowEditor
-                        editedFields={editedFields}
-                        onCancelEdit={handleCancelEdit}
+                    {isAdding && <TableRowEditor
                         onFieldChange={handleFiedChange}
                         onSave={handleSave}
+                        editedFields={editedFields}
+                        onCancelEdit={handleCancelEdit}
                         newWord={newWord}
                         setNewWord={setNewWord}
                         handleAddWord={handleAddWord}
-                    />
+                        errors={errors}
+                        setErrors={setErrors}
+                    />}
 
 
                     <table className={styles.table}>
@@ -112,7 +87,6 @@ export default function Table() {
                                     <TableList key={index} {...word} />
                                 )
                             })}
-
                         </tbody>
                     </table>
                 </div>
