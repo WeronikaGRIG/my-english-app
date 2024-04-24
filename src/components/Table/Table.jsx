@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { list } from '../../list';
 import TableList from '../TableList/TableList';
 import TableHeader from '../TableHeader/TableHeader';
@@ -11,29 +11,50 @@ export default function Table() {
     const [wordsList, setWordsList] = useState(list);
     //добавления нового слова
     const [newWord, setNewWord] = useState({ word: '', transcript: '', translation: '' });
-    const [editedFields, setEditedFields] = useState({});
+    // Состояние для отслеживания  добавления слова
     const [isAdding, setIsAdding] = useState(false);
     //ошибки валидации
     const [errors, setErrors] = useState({});
 
+    useEffect(() => {
+        const storedWords = localStorage.getItem('wordsList');
+        if (storedWords) {
+            setWordsList(JSON.parse(storedWords));
+        }
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem('wordsList', JSON.stringify(wordsList));
+    }, [wordsList]);
+
+
     //обработчик изменения поля
     const handleFiedChange = (fieldName, value) => {
-        setEditedFields(prevState => ({
+        setNewWord(prevState => ({
             ...prevState,
             [fieldName]: value
         }));
+
+        const error = validateField(fieldName, value);
         setErrors(prevErrors => ({
             ...prevErrors,
-            [fieldName]: value.trim() === ''
+            [fieldName]: error
         }));
     };
 
     //обраьлтчик сохранений изменений
     const handleSave = () => {
-        setWordsList(prevList => [...prevList, newWord]);
+        console.log('handleSave');
+
+        if (Object.values(errors).some(error => error)) {
+            console.log('Ошибка: Не все поля заполнены.');
+            return;
+        }
+
+        setWordsList((prevList) => [...prevList, newWord]);
         setNewWord({ word: '', transcript: '', translation: '' });
         setIsAdding(false);
-
+        setErrors({});
     };
 
     //оботчик добавления нового слова
@@ -44,8 +65,28 @@ export default function Table() {
     //отменяет редактирование
     const handleCancelEdit = () => {
         setIsAdding(false);
+        // Сброс значений для нового слова
         setNewWord({ word: '', transcript: '', translation: '' });
+        //сброс ошибок валидации
         setErrors({});
+    };
+
+    // Валидация поля
+    const validateField = (fieldName, value) => {
+        let error = false;
+        // Проверка на латиницу для английского слова
+        if (fieldName === 'word' && !/^[a-zA-Z\s]*$/.test(value)) {
+            error = true;
+        }
+        // Проверка на наличие квадратных скобок для транскрипции
+        if (fieldName === 'transcript' && !/^\[.*\]$/.test(value)) {
+            error = true;
+        }
+        // Проверка на кириллицу перевода
+        if (fieldName === 'translation' && !/^[\u0400-\u04FF\s]*$/.test(value)) {
+            error = true;
+        }
+        return error;
     };
 
     return (
@@ -67,13 +108,10 @@ export default function Table() {
                     {isAdding && <TableRowEditor
                         onFieldChange={handleFiedChange}
                         onSave={handleSave}
-                        editedFields={editedFields}
+                        editedFields={newWord}
                         onCancelEdit={handleCancelEdit}
-                        newWord={newWord}
-                        setNewWord={setNewWord}
-                        handleAddWord={handleAddWord}
                         errors={errors}
-                        setErrors={setErrors}
+
                     />}
 
                     <table className={styles.table}>
