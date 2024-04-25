@@ -10,7 +10,6 @@ export default function TableRowEditor({
     errors
 }) {
 
-
     //изменение состояния поля ввода
     const handleChange = (e) => {
         const { name, value } = e.target;

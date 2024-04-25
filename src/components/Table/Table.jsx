@@ -30,13 +30,13 @@ export default function Table() {
 
     //обработчик изменения поля
     const handleFiedChange = (fieldName, value) => {
-        setNewWord(prevState => ({
+        setNewWord((prevState) => ({
             ...prevState,
             [fieldName]: value
         }));
 
         const error = validateField(fieldName, value);
-        setErrors(prevErrors => ({
+        setErrors((prevErrors) => ({
             ...prevErrors,
             [fieldName]: error
         }));
@@ -44,17 +44,15 @@ export default function Table() {
 
     //обраьлтчик сохранений изменений
     const handleSave = () => {
-        console.log('handleSave');
 
-        if (Object.values(errors).some(error => error)) {
-            console.log('Ошибка: Не все поля заполнены.');
-            return;
+        if (!Object.values(errors).some(error => error)) {
+            setWordsList((prevList) => [...prevList, newWord]);
+            setNewWord({ word: '', transcript: '', translation: '' });
+            setIsAdding(false);
+            setErrors({});
+        } else {
+            console.log('Ошибка: Заполни все поля!')
         }
-
-        setWordsList((prevList) => [...prevList, newWord]);
-        setNewWord({ word: '', transcript: '', translation: '' });
-        setIsAdding(false);
-        setErrors({});
     };
 
     //оботчик добавления нового слова
