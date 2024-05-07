@@ -5,13 +5,13 @@ import styles from './VocabList.module.css';
 
 export default function VocabList({ word, transcript, translation, onCheckTranslation }) {
 
-    const [isHoverVocab, setHoverVocab] = useState(true);
-    const [isTranslationShown, setTranslationShown] = useState(false)
+    const [hoverVocab, setHoverVocab] = useState(true);
+    const [translationShown, setTranslationShown] = useState(false)
     const translationButtonRef = useRef(null)
 
     const handleClick = () => {
-        setHoverVocab(!isHoverVocab);
-        if (!isTranslationShown) {
+        setHoverVocab(!hoverVocab);
+        if (!translationShown) {
             setTranslationShown(true);
             onCheckTranslation();
         }
@@ -27,7 +27,12 @@ export default function VocabList({ word, transcript, translation, onCheckTransl
     return <li className={styles.vocab__list}>
         <h3 className={styles.vocab__list_word}>{word}</h3>
         <p className={styles.vocab__list_transcript}>{transcript}</p>
-        <p className={isHoverVocab ? styles.vocab__list_translation : styles.vocab__check}> {translation} </p>
-        <button ref={translationButtonRef} className={styles.vocab__list_chek} onClick={handleClick}>Проверить</button>
+        <p className={hoverVocab ? styles.vocab__list_translation : styles.vocab__check}> {translation} </p>
+        <button
+            ref={translationButtonRef}
+            className={styles.vocab__list_chek}
+            onClick={handleClick}>
+            Проверить
+        </button>
     </li>;
 }

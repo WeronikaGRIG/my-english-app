@@ -28,3 +28,7 @@ td {
     background-color: var(--purple);
     color: var(--white);
 }
+
+.btn__show {
+    display: none;
+}
