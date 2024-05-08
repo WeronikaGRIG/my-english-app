@@ -12,13 +12,17 @@ import styles from './TableList.module.css';
 export default function TableList({ word, transcript, translation }) {
 
 
-    const [showBtnAdding, setShowBtnAdding] = useState(false);
-    // const [addEditer, setAddEditer] = useState(true);
+    const [editing, setEditing] = useState(false)
 
     // Слушатель для кнопки редактирования(открываются инпуты, кнопка добавить слова)
     const clickEditerHandler = () => {
-        setShowBtnAdding(!showBtnAdding);
-        console.log('clickEditer');
+        setEditing(!editing);
+        console.log('Click Editer');
+    };
+
+    const clickBtnAddingHandler = () => {
+        setEditing(!editing);
+        console.log('Click Add');
     };
 
 
@@ -30,15 +34,20 @@ export default function TableList({ word, transcript, translation }) {
             <td className={styles.td}><p>{translation}</p></td>
 
             <div className={styles.button}>
-                <button
-                    className={showBtnAdding ? styles.td__btn : styles.btn__show}>
-                    <AddCircleIcon />
-                </button>
-                <button
-                    className={!showBtnAdding ? styles.td__btn : styles.btn__show}
-                    onClick={clickEditerHandler}>
-                    <EditIcon />
-                </button>
+
+
+                {editing ? (
+                    <button
+                        className={editing ? styles.td__btn : styles.btn__show}
+                        onClick={clickBtnAddingHandler}>
+                        <AddCircleIcon />
+                    </button>
+                ) : (
+                    <button
+                        className={editing ? styles.btn__show : styles.td__btn}
+                        onClick={clickEditerHandler}>
+                        <EditIcon />
+                    </button>)}
 
                 <button
                     className={styles.td__btn}>
@@ -47,7 +56,7 @@ export default function TableList({ word, transcript, translation }) {
 
             </div>
 
-        </tr>
+        </tr >
 
     )
 }
