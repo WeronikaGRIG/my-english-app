@@ -46,6 +46,7 @@ export default function TableList({ word, transcript, translation }) {
             <td className={styles.td}>
                 {editing ? (
                     <input
+                        className={styles.input}
                         type="text"
                         value={editedWord}
                         onChange={changeWordHandler}
@@ -55,6 +56,7 @@ export default function TableList({ word, transcript, translation }) {
             <td className={styles.td}>
                 {editing ? (
                     <input
+                        className={styles.input}
                         type="text"
                         value={editedTranscript}
                         onChange={changeTranscriptHandler}
@@ -65,6 +67,7 @@ export default function TableList({ word, transcript, translation }) {
             <td className={styles.td}>
                 {editing ? (
                     <input
+                        className={styles.input}
                         type="text"
                         value={editedTranslation}
                         onChange={changeTranslationHandler}
@@ -75,13 +78,13 @@ export default function TableList({ word, transcript, translation }) {
             <div className={styles.button}>
                 {editing ? (
                     <button
-                        className={editing ? styles.td__btn : styles.btn__show}
+                        className={editing ? styles.td__btn : styles.btn__none}
                         onClick={clickBtnAddingHandler}>
                         <AddCircleIcon />
                     </button>
                 ) : (
                     <button
-                        className={editing ? styles.btn__show : styles.td__btn}
+                        className={editing ? styles.btn__none : styles.td__btn}
                         onClick={clickEditerHandler}>
                         <EditIcon />
                     </button>)}

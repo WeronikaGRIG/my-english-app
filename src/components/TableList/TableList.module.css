@@ -2,14 +2,18 @@ tr {
     position: relative;
 }
 
-.tr__active {
-    background-color: var(--blue);
-}
-
 td {
-    flex: 1 0 80px;
+    width: 200px;
     padding: 5px;
     border: 1px solid black;
+}
+
+.input {
+    display: block;
+
+    width: 100%;
+    padding: 5px;
+    text-align: center;
 }
 
 .button {
@@ -29,6 +33,6 @@ td {
     color: var(--white);
 }
 
-.btn__show {
+.btn__none {
     display: none;
 }
