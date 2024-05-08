@@ -12,12 +12,16 @@ import styles from './TableList.module.css';
 export default function TableList({ word, transcript, translation }) {
 
 
-    const [editing, setEditing] = useState(false)
+    const [editing, setEditing] = useState(false);
+    const [editedWord, setEditWord] = useState(word);
+    const [editedTranscript, setEditTranscript] = useState(transcript);
+    const [editedTranslation, setEditTranslation] = useState(translation);
 
     // Слушатель для кнопки редактирования(открываются инпуты, кнопка добавить слова)
     const clickEditerHandler = () => {
         setEditing(!editing);
         console.log('Click Editer');
+
     };
 
     const clickBtnAddingHandler = () => {
@@ -25,17 +29,50 @@ export default function TableList({ word, transcript, translation }) {
         console.log('Click Add');
     };
 
+    const changeWordHandler = (event) => {
+        setEditWord(event.target.value)
+    }
 
+    const changeTranscriptHandler = (event) => {
+        setEditTranscript(event.target.value)
+    }
+
+    const changeTranslationHandler = (event) => {
+        setEditTranslation(event.target.value)
+    }
 
     return (
         <tr className={styles.tr}>
-            <td className={styles.td}><p>{word}</p></td>
-            <td className={styles.td}><p>{transcript}</p></td>
-            <td className={styles.td}><p>{translation}</p></td>
+            <td className={styles.td}>
+                {editing ? (
+                    <input
+                        type="text"
+                        value={editedWord}
+                        onChange={changeWordHandler}
+                    />) : (<p>{word}</p>)}
+            </td>
+
+            <td className={styles.td}>
+                {editing ? (
+                    <input
+                        type="text"
+                        value={editedTranscript}
+                        onChange={changeTranscriptHandler}
+                    />
+                ) : (<p>{transcript}</p>)}
+            </td>
+
+            <td className={styles.td}>
+                {editing ? (
+                    <input
+                        type="text"
+                        value={editedTranslation}
+                        onChange={changeTranslationHandler}
+                    />
+                ) : (<p>{translation}</p>)}
+            </td>
 
             <div className={styles.button}>
-
-
                 {editing ? (
                     <button
                         className={editing ? styles.td__btn : styles.btn__show}
@@ -53,7 +90,6 @@ export default function TableList({ word, transcript, translation }) {
                     className={styles.td__btn}>
                     <DeleteForeverIcon />
                 </button>
-
             </div>
 
         </tr >
