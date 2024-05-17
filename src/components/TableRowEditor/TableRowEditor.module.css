@@ -5,9 +5,8 @@
 
 .td__edit {
     flex: 1 0 80px;
-    background-color: var(--blueB);
-    /* padding: 10px; */
-    border: 1px solid var(--grey);
+    padding: 10px;
+    border: none;
     color: var(--purple);
 }
 
@@ -27,18 +26,18 @@
     border: 1px solid red;
 }
 
-.td__edit_btn {
+/* .td__edit_btn {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-}
+} */
 
 .td__btn {
     /* width: 100px;
     height: 32px; */
 
     padding: 10px;
-    margin: 3px auto;
+    margin: 10px 5px;
 
     border-radius: 7px;
     background-color: var(--purple);

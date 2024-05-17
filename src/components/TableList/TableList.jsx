@@ -4,7 +4,6 @@ import EditIcon from '@mui/icons-material/Edit';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 
-// import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 import styles from './TableList.module.css';
 

@@ -1,9 +1,7 @@
 .stack {
-    display: flex;
-    flex-direction: row;
     margin: 15px 20px;
 }
 
 .badge {
-    padding: 0 15px;
+    padding: 0 10px;
 }

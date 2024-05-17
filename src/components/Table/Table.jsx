@@ -1,7 +1,7 @@
 import { list } from '../../list';
 import TableList from '../TableList/TableList';
 import TableHeader from '../TableHeader/TableHeader';
-// import TableRowEditor from '../TableRowEditor/TableRowEditor';
+import TableRowEditor from '../TableRowEditor/TableRowEditor';
 
 import styles from './Table.module.css';
 
@@ -15,14 +15,11 @@ export default function Table() {
                     <h3 className={styles.title}>Самоучитель</h3>
 
 
-                    {/* <div className={styles.button}>
-                        <button
-                            className={styles.td__btn}>
-                            Добавить слово
-                        </button>
-                    </div> */}
+                    <h3>
+                        Добавить слово
+                    </h3>
 
-                    {/* <TableRowEditor /> */}
+                    <TableRowEditor />
 
                     <table className={styles.table}>
                         <tbody className={styles.tbody}>

@@ -51,7 +51,11 @@ export default function Vocab() {
 
                 <div className={styles.wrapper}>
                     <h3 className={styles.title}>Слова</h3>
-                    <VocabStats learnedWordsCount={learnedWordsCount} />
+
+                    <div>
+                        <VocabStats learnedWordsCount={learnedWordsCount} />
+                    </div>
+
                     <div className={styles.vocabs__wrapper}>
 
                         <VocabArrowRight
