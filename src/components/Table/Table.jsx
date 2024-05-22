@@ -1,4 +1,6 @@
-import { list } from '../../list';
+import { useContext } from 'react';
+import { WordContext } from '../../context/WordContext.jsx';
+
 import TableList from '../TableList/TableList';
 import TableHeader from '../TableHeader/TableHeader';
 import TableRowEditor from '../TableRowEditor/TableRowEditor';
@@ -7,13 +9,14 @@ import styles from './Table.module.css';
 
 export default function Table() {
 
+    const { words } = useContext(WordContext)
+
     return (
 
         <main className={styles.main}>
             <div className={styles.container}>
                 <div className={styles.wrapper}>
                     <h3 className={styles.title}>Самоучитель</h3>
-
 
                     <h3>
                         Добавить слово
@@ -25,9 +28,9 @@ export default function Table() {
                         <tbody className={styles.tbody}>
                             <TableHeader />
 
-                            {list.map((word, index) => {
+                            {words.map((word, id) => {
                                 return (
-                                    <TableList key={index} {...word} />
+                                    <TableList key={id} {...word} />
                                 )
                             })}
                         </tbody>
